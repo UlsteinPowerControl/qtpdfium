@@ -6,13 +6,13 @@ QtPdfium is a Qt module that renders PDF files using the pdfium project by googl
 To use the library you must first install it in the same location as your Qt installation. Here is an example on Linux/Mac:
 
 ```sh
-git clone --recursive https://github.com/paulovap/qtpdfium
+git clone --recursive https://github.com/UlsteinPowerControl/qtpdfium
 cd qtpdfium
 qmake
 make
 make install (might need sudo)
 ```
-After that you are ready to use it. Remember to build for each platform you want. (Desktop, Android, iOS...)
+After that you are ready to use it. Remember to build for each platform / qt version you want. (Desktop, Android, iOS...)
 
 ### Usage
 
