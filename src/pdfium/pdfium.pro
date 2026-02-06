@@ -10,19 +10,21 @@ DEFINES += __QT__ \
 DEFINES += QT_NO_VERSION_TAGGING
 
 QT = core-private core gui
-CONFIG += warn_on strict_flags c++11
-load(qt_module)
+QT = core gui
+DEFINES += QT_BUILD_PDFIUM_LIB
+CONFIG += warn_on strict_flags c++17 shared
+TEMPLATE = lib
 
 #QMAKE_DOCS = $$PWD/doc/qtpdfium.qdocconf
 include($$PWD/../3rdparty/pdfium.pri)
 
 
-PRIVATE_HEADERS += \
-    $$PWD/qpdfiumglobal.h
-
 PUBLIC_HEADERS += \
     $$PWD/qpdfium.h \
-    $$PWD/qpdfiumpage.h
+    $$PWD/qpdfiumpage.h \
+    $$PWD/qpdfiumglobal.h \
+    $$PWD/QPdfium \
+    $$PWD/QPdfiumPage
 SOURCES += \
     $$PWD/qpdfiumglobal.cpp \
     $$PWD/qpdfium.cpp \
@@ -30,3 +32,9 @@ SOURCES += \
 
 HEADERS += $$PUBLIC_HEADERS $$PRIVATE_HEADERS
 
+target.path = $$[QT_INSTALL_LIBS]
+headers.path = $$[QT_INSTALL_HEADERS]/QtPdfium
+headers.files = $$PUBLIC_HEADERS
+module_pri.path = $$[QT_INSTALL_ARCHDATA]/mkspecs/modules
+module_pri.files = $$PWD/../../mkspecs/modules/qt_lib_pdfium.pri
+INSTALLS += target headers module_pri
