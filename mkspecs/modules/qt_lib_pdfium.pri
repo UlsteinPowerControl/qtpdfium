@@ -1,0 +1,16 @@
+QT.pdfium.VERSION = 5.5.0
+QT.pdfium.name = QtPdfium
+QT.pdfium.module = QtPdfium
+QT.pdfium.libs = $$QT_MODULE_LIB_BASE
+QT.pdfium.ldflags =
+QT.pdfium.includes = $$QT_MODULE_INCLUDE_BASE $$QT_MODULE_INCLUDE_BASE/QtPdfium
+QT.pdfium.frameworks =
+QT.pdfium.bins = $$QT_MODULE_BIN_BASE
+QT.pdfium.plugin_types =
+QT.pdfium.depends = core gui
+QT.pdfium.uses =
+QT.pdfium.module_config = v2
+QT.pdfium.DEFINES = QT_PDFIUM_LIB
+QT.pdfium.enabled_features =
+QT.pdfium.disabled_features =
+QT_MODULES += pdfium

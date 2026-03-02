@@ -14,6 +14,7 @@ QT = core gui
 DEFINES += QT_BUILD_PDFIUM_LIB
 CONFIG += warn_on strict_flags c++17 shared
 TEMPLATE = lib
+VERSION = 5.5.0
 
 #QMAKE_DOCS = $$PWD/doc/qtpdfium.qdocconf
 include($$PWD/../3rdparty/pdfium.pri)
